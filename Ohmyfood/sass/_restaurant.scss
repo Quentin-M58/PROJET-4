@@ -1,0 +1,132 @@
+/*restaurant*/
+.restaurant {
+        display: flex;
+        flex-direction: column;
+        background-color: $blanfon;
+        padding: 24px 30px;
+
+        h3 {
+                font-size: 24px;
+                padding: 24px 0px 20px 0px;
+        }
+
+        .menu {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 16px;
+                padding-bottom: 24px;
+
+                @media (min-width: 1024px) {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-template-rows: repeat(2, 1fr);
+                }
+        }
+
+        .card {
+                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 10%);
+                border-radius: 10px;
+                position: relative;
+
+                .new {
+                        position: absolute;
+                        top: 8px;
+                        right: 10px;
+                        background-color: $vert;
+                        padding: 9px 12px;
+                        font-size: 16px;
+                        color: $verfon;
+                }
+
+                .card-image {
+                        height: 180px;
+                        width: 100%;
+                        background-size: cover;
+                        background-position: bottom;
+                        border-radius: 10px 10px 0 0;
+                }
+
+                .card-description {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        background-color: $blanc;
+                        color: $noir;
+                        border-radius: 0 0 10px 10px;
+                        padding: 16px;
+
+                        h5 {
+                                font-size: 18px;
+                        }
+
+                        p {
+                                font-size: 18px;
+                                padding-top: 3px;
+                        }
+                }
+
+                .card-image1 {
+                        background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+                        -o-object-fit: cover;
+                        object-fit: cover;
+                }
+
+                .card-image2 {
+                        background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+                        background-position: center;
+                }
+
+                .card-image3 {
+                        background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+                }
+
+                .card-image4 {
+                        background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+                }
+        }
+
+        .heart {
+                .afar {
+                        position: absolute;
+                        right: 28px;
+                        top: 210px;
+                }
+
+                .far {
+                        @extend .afar;
+                }
+
+                .fas {
+                        @extend .afar;
+                }
+        }
+}
+
+.heart {
+        .fas {
+                opacity: 0;
+                color: $noir;
+                font-size: 26px;
+                transition-duration: 0.75s;
+        }
+
+        .far {
+                color: $noir;
+                font-size: 26px;
+                transition-duration: 0.75s;
+        }
+
+        &:hover {
+                .far {
+                        display: none;
+                }
+
+                .fas {
+                        opacity: 1;
+                        background: linear-gradient(to bottom, $rose, $violet);
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                }
+
+        }
+}

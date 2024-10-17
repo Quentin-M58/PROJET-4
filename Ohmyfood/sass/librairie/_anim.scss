@@ -1,0 +1,90 @@
+/*anim*/
+.anim-apar {
+        opacity: 0;
+        animation-name: appar;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+}
+
+@for $numdelay from 0 through 12 {
+        .delay#{$numdelay} {
+                animation-delay: ($numdelay * 2s);
+        }
+}
+
+@keyframes appar {
+        0% {
+                opacity: 0;
+        }
+
+        50% {
+                opacity: 0.5;
+        }
+
+        100% {
+                opacity: 1;
+        }
+}
+
+.fon {
+        z-index: 1000;
+        position: fixed;
+        background: white;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        animation-name: fondue;
+        animation-duration: 1s;
+        animation-delay: 4s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+}
+
+.icochar {
+        text-align: center;
+        z-index: 1000;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        font-size: 500px;
+        animation-name: anico;
+        animation-duration: 5s;
+        animation-delay: 0s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+}
+
+@keyframes anico {
+        0% {
+                transform: translateX(1000px);
+        }
+
+        33% {
+                transform: translateX(0px);
+        }
+
+        66% {
+                transform: rotate(0deg);
+        }
+
+        100% {
+                transform: rotate(360deg) scale(0.01);
+        }
+
+}
+
+@keyframes fondue {
+        0% {
+                opacity: 1;
+        }
+
+        100% {
+                opacity: 0;
+                display: none;
+        }
+}

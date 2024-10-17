@@ -1,0 +1,33 @@
+/*base*/
+* {
+        font-family: roboto;
+        box-sizing: border-box;
+}
+
+a {
+        text-decoration: none;
+        color: inherit;
+}
+
+.marg {
+        margin: 0,
+}
+
+h1 {
+        @extend .marg;
+}
+
+h5 {
+        @extend .marg;
+}
+
+p {
+        @extend .marg;
+}
+
+body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @extend .marg;
+}

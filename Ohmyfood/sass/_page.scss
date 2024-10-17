@@ -1,0 +1,196 @@
+/*page*/
+.rest {
+        margin: 0px;
+}
+
+.rest-header {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        font-size: 1.2rem;
+}
+
+.rest-header-logo {
+        font-family: "Shrikhand";
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.rest-nav {
+        position: absolute;
+        left: 17px;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+}
+
+.rest-img {
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 32rem;
+        width: 100%;
+}
+
+.rest-menu {
+        margin-top: -4rem;
+        border-radius: 2rem 2rem 0 0;
+        position: relative;
+        background-color: $blanfon;
+        padding: 0 16px 0 16px;
+}
+
+.rest-menu-content {
+        margin: 20px 0px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+}
+
+.rest-menu-titre {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 29px;
+
+        h2 {
+                font-family: "Shrikhand", "cursive";
+                font-size: 28px;
+        }
+
+        .heart {
+                height: 2rem;
+                width: 2rem;
+                padding: 0;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                position: relative;
+
+                .bfar {
+                        position: absolute;
+                        display: flex;
+                        top: 0;
+                        left: 0;
+                }
+
+                .far {
+                        @extend .bfar;
+                }
+
+                .fas {
+                        @extend .bfar;
+                }
+        }
+}
+
+.rest-menu-part h3 {
+        margin: 0px auto;
+        font-size: 16px;
+}
+
+.underline {
+        content: "";
+        width: 3rem;
+        height: 0.25rem;
+        display: flex;
+        background-color: $vert;
+        position: relative;
+        margin-top: 8px;
+}
+
+.rest-menu-part-card {
+        background-color: $blanc;
+        border-radius: 0.75rem;
+        padding: 16px;
+        margin: 12px 0 12px 0;
+        display: flex;
+        justify-content: space-between;
+}
+
+.rest-menu-part-card-txt {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+}
+
+.rest-menu-part-card {
+        h5 {
+                font-size: 15.4px;
+                font-weight: lighter;
+                margin: 0;
+                text-overflow: ellipsis;
+                overflow: hidden;
+        }
+
+        h4 {
+                font-size: 18px;
+                margin: 0;
+                text-overflow: ellipsis;
+                overflow: hidden;
+        }
+}
+
+.rest-menu-part-prix {
+        font-size: 15.4px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        transform: translateX(60px);
+        transition-duration: 0.5s;
+}
+
+.rest-menu-part-confirm {
+        opacity: 0;
+        background-color: $vert;
+        margin: -1rem -1rem -1rem 1rem;
+        height: 175%;
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 0.75rem 0.75rem 0;
+}
+
+.icon-confirm {
+        height: 1.6rem;
+        width: 1.6rem;
+        background-color: $blanc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+        color: $vert;
+}
+
+.rest-menu-part-card:hover .rest-menu-part-confirm {
+        opacity: 1;
+}
+
+.rest-menu-part-card:hover .rest-menu-part-prix {
+        transform: translateX(0);
+}
+
+.command {
+        display: flex;
+        justify-content: center;
+
+        button {
+                border: none;
+                /*background-color: $blanfon;*/
+                background-color: transparent;
+        }
+
+        .explore-btn {
+                padding: 0.75rem 1.5rem;
+        }
+}
